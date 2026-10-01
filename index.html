@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <title>Controle de Estoque</title>
+
+    <link rel="stylesheet" href="interface.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Controle de Estoque</h1>
+        <p>Gerenciamento de produtos</p>
+    </header>
+
+    <main>
+
+        <section>
+    
+            <h2>Cadastrar Produto</h2>
+        
+
+            <input type="text" id='produto' placeholder="Nome do produto">
+
+            <input type="text" id="sku" placeholder="SKU">
+
+            <input type="number" id="quantidade" placeholder="Quantidade inicial">
+
+            <input type="number" id="minimo" placeholder="Estoque minimo">
+
+            <button onclick='cadastrarProduto()'>
+                Cadastrar Produto
+            </button>
+        <section>
+
+            <h2>Entrada de Produto</h2>
+            <input type="text" id="skuEntrada" placeholder="SKU do produto">
+            <input type="number" id="quantidadeEntrada" placeholder="Quantidade">
+            <button onclick="registrarEntrada()">
+                Registrar Entrada
+            </button>
+
+        <section>
+
+            <h2>Saída de Produto</h2>
+
+            <input type="text" id="skuSaida" placeholder="SKU do produto">
+            <input type="number" id="quantidadeSaida" placeholder="Quantidade">
+            <button onclick="registrarSaida()">
+                Registrar Saída
+            </button>
+        </section>
+        
+        </section>
+        </section>
+
+    
+
+    
+    <section>
+
+    <h2>Estoque Atual</h2>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>SKU</th>
+                <th>Quantidade</th>
+                <th>Estoque minimo</th>
+                <th>Situação</th>
+            </tr>
+        </thead>
+
+        <tbody id="tabelaEstoque">
+
+        </tbody>
+    </table>
+</section>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+
+
+
+</html>
